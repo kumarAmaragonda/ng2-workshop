@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>04-Parameters</title>
+    <script type="text/javascript">
+
+       function sum(a, b) {
+           console.log(a+b);
+       }
+
+       function sum(a, b, c) {
+           console.log(a+b+c);
+       }
+
+       function sum() {
+            console.log('no named prams');   
+
+            for(var i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }  
+
+            console.log(Array.isArray(arguments));
+       }
+
+       console.log(sum.length);
+       sum(10, 20, 30);
+       
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

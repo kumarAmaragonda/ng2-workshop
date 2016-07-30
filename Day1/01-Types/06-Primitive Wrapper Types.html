@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>06-Primitive Wrapper Types</title>
+
+    <script type="text/javascript">
+
+        var name = 'Shravan Kasagoni';
+        var idx = name.indexOf('K');
+        console.log(idx);
+
+        // what the JavaScript engine does
+        /*
+            var name = 'Shravan Kasagoni';
+            var temp = new String(name);
+            var idx = temp.indexOf('K');
+            temp = null;
+            console.log(idx);
+        */
+
+        name.testProp = 'something';
+        console.log(name.testProp);
+
+         // what the JavaScript engine does
+        /*
+            var temp = new String(name);
+            temp.testProp = 'something';
+            temp = null;
+            console.log(name.testProp);
+        */
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
