@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>04-Identifying Reference Types</title>
+
+    <script type="text/javascript">
+
+        var fullName1 = new Object();
+        var fullName2 = {
+            firstName: 'Shravan Kumar',
+            lastName: 'Kasagoni'
+        };
+
+        var primaryColors1 = new Array("red", "green", "blue");
+        var primaryColors2 = ["red", "green", "blue"];
+
+        var date = new Date();
+        var reg = new RegExp();
+
+         function square1(value) {
+            return value * value;
+        }
+
+        var square2 = new Function("value", "return value * value;");
+
+        console.log(typeof fullName1);
+        console.log(typeof fullName2);
+
+        console.log(typeof primaryColors1);
+        console.log(typeof primaryColors2);
+
+        console.log(typeof square1);
+        console.log(typeof square2);
+
+        console.log(typeof date);
+        console.log(typeof reg);
+
+        //using instanceof operator
+        console.log(fullName1 instanceof Object);
+        console.log(fullName2 instanceof Object);
+
+        console.log(primaryColors1 instanceof Array);
+        console.log(primaryColors2 instanceof Array);
+
+        console.log(square1 instanceof Function);
+        console.log(square2 instanceof Function);
+
+        console.log(date instanceof Date);
+        console.log(reg instanceof RegExp);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
