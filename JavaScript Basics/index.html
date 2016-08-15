@@ -1,0 +1,449 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>JavaScript Basics</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style type="text/css">
+			pre {
+				font-size: 0.7em;
+				box-shadow: none !important;
+			}
+			pre code {
+				line-height: 35px !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h2 style="text-transform: none;">JavaScript Basics</h2>
+				</section>
+
+				<section>
+					<h2 style="text-transform: none;">Types</h2>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;text-align: left;">Primitive Types</h3>
+					<p class="fragment" data-fragment-index="0" style="text-align: left;">Number: Any integer or floating-point numeric value</p>
+					<p class="fragment" data-fragment-index="1" style="text-align: left;">String: A character or sequence of characters delimited by either single or double quotes</p>
+					<p class="fragment" data-fragment-index="2" style="text-align: left;">Boolean: <span style="color: #e3ceab">true</span> or <span style="color: #e3ceab">false</span></p>
+					<p class="fragment" data-fragment-index="3" style="text-align: left;">Null: A primitive type that has only one value, <span style="color: #e3ceab">null</span></p>
+					<p class="fragment" data-fragment-index="4" style="text-align: left;">Undefined: A primitive type that has only one value, <span style="color: #e3ceab">undefined</span></p>
+				</section>
+
+				<section>
+<pre>
+<code>
+var a; //undefined
+
+//Numbers
+a = 100;
+a = 100.01;
+
+//Strings
+var name = 'Shravan Kasagoni',
+    topic = "JavaScript Basics";
+
+//Boolean
+var success = true;
+success = false;
+
+//undefined
+var b = undefined;
+
+//null
+b = null;
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h2 style="text-transform: none;">Identifying Primitive Types</h2>
+				</section>
+
+				<section>
+					<p class="fragment" data-fragment-index="0" style="text-align: left;">using typeof operator</p>
+<pre class="fragment" data-fragment-index="1">
+<code>
+typeof 100 // "number"
+typeof 200.35 // "number"
+typeof 'Shravan Kasagoni' // "string"
+typeof false // "boolean"
+typeof true // "boolean"
+typeof undefined // "undefined"
+typeof null // "object"
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">Working with null</h3>
+<pre class="fragment" data-fragment-index="0">
+<code>
+typeof null; //the result is "object"
+
+</code>
+</pre>
+<p class="fragment" data-fragment-index="1" style="text-align: left;">It's an error in JavaScript language itself, acknowledged by TC39 committee.</p>
+<pre class="fragment" data-fragment-index="2">
+<code>
+value === null // true or false
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h2 style="text-transform: none;">Operators</h2>
+				</section>
+
+				<section>
+					<p class="fragment" data-fragment-index="0" style="text-align: left;">Arithmetic Operators:&nbsp;&nbsp;+&nbsp;&nbsp;-&nbsp;&nbsp;*&nbsp;&nbsp;/&nbsp;&nbsp;%</p>
+					<p class="fragment" data-fragment-index="1" style="text-align: left;">Relational Operators:&nbsp;&nbsp;==&nbsp;&nbsp;===</p>
+					<p class="fragment" data-fragment-index="2" style="text-align: left;">Comparison Operators:&nbsp;&nbsp;&lt;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&lt;=&nbsp;&nbsp;&gt;=</p>
+					<p class="fragment" data-fragment-index="3" style="text-align: left;">Logical Operators:&nbsp;&nbsp;&amp;&amp;&nbsp;&nbsp;||&nbsp;&nbsp;!</p>
+					<p class="fragment" data-fragment-index="4" style="text-align: left;">Conditional Operators:&nbsp;&nbsp;?:</p>
+					<p class="fragment" data-fragment-index="5" style="text-align: left;">Miscellaneous Operators:&nbsp;&nbsp;=&nbsp;&nbsp;in&nbsp;&nbsp;typeof&nbsp;&nbsp;instanceof&nbsp;&nbsp;delete</p>
+				</section>
+
+				<section>
+					<h2 style="text-transform: none;">Conditionals Statements</h2>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">if</h3>
+<pre>
+<code>
+if (expression)
+    statement
+
+if (expression) {
+    //statements
+}
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">if else</h3>
+<pre>
+<code>
+if (expression) {
+    //statements
+} else {
+    //statements
+}
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">else if</h3>
+					<pre>
+<code>
+if (expression) {
+    //statements
+} else if (expression) {
+    //statements
+} else if (expression) {
+    //statements
+} else {
+    //statements
+}
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">switch</h3>
+					<pre>
+<code>
+switch (expression) {
+    case expression1:
+        // statements
+        break;
+    case expression2:
+        // statements
+        break;
+    default:
+        // statements
+        break;
+}
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h2 style="text-transform: none;">Looping Statements</h2>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">while</h3>
+					<pre>
+<code>
+while (expression) {
+    //statements
+}
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">do while</h3>
+					<pre>
+<code>
+do {
+    //statements
+} while (expression);
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">for</h3>
+					<pre>
+<code>
+for (initialize; condition; increment) {
+    //statements
+}
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">Don't's</h3>
+					<pre>
+<code>
+if (expression);
+
+while (expression);
+
+for (initialize; condition; increment);
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h2 style="text-transform: none;">Reference Types</h2>
+				</section>
+
+				<section>
+					<p class="fragment" data-fragment-index="0" style="text-align: left;">Reference types represent objects in JavaScript</p>
+					<p class="fragment" data-fragment-index="1" style="text-align: left;">An object is an unordered collection of properties</p>
+					<p class="fragment" data-fragment-index="2" style="text-align: left;">Property consists of a name (always a string) and a value (Primitive, Reference)</p>
+					<p class="fragment" data-fragment-index="3" style="text-align: left;">If value of a property is a function, it is called a method</p>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;text-align: left">Built-in Objects</h3>
+					<ul style="display: block">
+						<li style="padding-bottom: 0.5em;">Array</li>
+						<li style="padding-bottom: 0.5em">Error</li>
+						<li style="padding-bottom: 0.5em">Function</li>
+						<li style="padding-bottom: 0.5em">Math</li>
+						<li style="padding-bottom: 0.5em">Object</li>
+						<li style="padding-bottom: 0.5em">RegExp</li>
+					</ul>
+
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">Creating Objects</h3>
+					<ul>
+						<li class="fragment" data-fragment-index="0" style="padding-bottom: 0.5em">Object can be created using Literal Form, new operator with a constructor</li>
+					</ul>
+				</section>
+
+				<section>
+					<p style="text-align: left;">Creating Object using new operator with a constructor</p>
+<pre>
+<code>
+var person = new Object();
+
+</code>
+</pre>
+					<p style="text-align: left;">JavaScript objects are dynamic - properties can be added and deleted any time.</p>
+<pre>
+<code>
+person.name = 'Shravan';
+person.age = 20;
+person.printDetails = function () {
+  console.log(this.name, this.age);
+};
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">Literal Form</h3>
+					<ul>
+						<li  class="fragment" data-fragment-index="0" style="padding-bottom: 0.5em">A literal is syntax that allows you to define a reference value without explicitly creating an object, using the new operator and the object’s constructor</li>
+						<li  class="fragment" data-fragment-index="1" style="padding-bottom: 0.5em">Several built-in reference types have literal forms</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none;">Creating Object using literal form</h3>
+<pre>
+<code>
+var empty = {};
+
+var name = {
+  firstName: 'Shravan Kumar',
+  lastName: 'Kasagoni'
+};
+
+var person = {
+  firstName: 'Shravan Kumar',
+  lastName: 'Kasagoni',
+  age: 20,
+  getFullName: function () {
+    console.log(this.firstName, this.lastName);
+  },
+  emails: ['shravan@theshravan.net', 'shravan@outlook.com']
+};
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<p style="text-align: left;">Creating Arrays using new operator with a constructor</p>
+<pre>
+<code>
+var primaryColors = new Array("red", "green", "blue");
+
+console.log(primaryColors[1]); // "green"
+
+</code>
+</pre>
+					<p style="text-align: left;">Creating Arrays using literal form</p>
+<pre>
+<code>
+var primaryColors = ["red", "green", "blue"];
+
+console.log(primaryColors[0]); // "red"
+
+</code>
+</pre>
+				</section>
+
+				<section>
+					<p style="text-align: left;">Creating Function using literal form</p>
+					<pre>
+<code>
+function square(value) {
+  return value * value;
+}
+
+</code>
+</pre>
+					<p style="text-align: left;">Creating Function using new operator with a constructor</p>
+					<pre>
+<code>
+var square = new Function("value", "return value * value;");
+
+</code>
+</pre>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+				<section>
+					<h2 style="text-transform: none;">JavaScript Functions</h2>
+				</section>
+
+				<section>
+<pre style="font-size: 0.6em; box-shadow: none; float: left;width: 49%;" class="fragment" data-fragment-index="0">
+<code style=" max-height: 700px;">/* Function Declaration */
+function testMethod () {
+
+
+
+
+}
+
+testMethod();
+</code>
+</pre>
+<pre style="font-size: 0.6em; box-shadow: none; float: right;width: 49%; margin-left:2%;" class="fragment" data-fragment-index="1">
+<code style=" max-height: 700px;">/* Function Expression */
+var testMethod = function () {
+
+
+
+
+}
+
+testMethod();
+</code>
+</pre>
+					<p class="fragment" data-fragment-index="2" style="clear:both;">
+						Function expressions can not be invoked before they are declared
+					</p>
+				</section>
+
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
