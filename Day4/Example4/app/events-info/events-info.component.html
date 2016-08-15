@@ -1,0 +1,12 @@
+<div class="row">
+
+    <div class="col-md-4">
+        <ul *ngFor="let eventInfo of events" class="eventBox">
+            <li (click)="showEventDetails(eventInfo)">{{eventInfo.title}}</li>
+        </ul>
+    </div>
+
+   <div class="col-md-8">
+        <event-info-card [selected-event-info]="selectedEvent" (remove) = "deleteEventInfo($event)" ></event-info-card>
+   </div>
+</div>

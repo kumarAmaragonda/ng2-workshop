@@ -1,0 +1,7 @@
+<h1>My Events Sample1</h1>
+
+<div *ngFor="let eventInfo of events" class="eventBox">
+    <h2>{{eventInfo.title}}</h2>
+    <p>{{eventInfo.eventDate | date}}</p>
+</div>
+

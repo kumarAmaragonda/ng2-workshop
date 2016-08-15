@@ -1,0 +1,18 @@
+<h1>My Events Sample2</h1>
+
+<div style="width: 30%; float: left">
+
+    <ul *ngFor="let eventInfo of events" class="eventBox">
+        <li (click)="showEventDetails(eventInfo)">{{eventInfo.title}}</li>
+    </ul>
+
+</div>
+
+<div style="width: 60%; float: right">
+    <div *ngIf="selectedEvent">
+        <h1>{{selectedEvent.title}}</h1>
+        <h3>{{selectedEvent.eventDate | date}}</h3>
+        <p>{{selectedEvent.venue}}</p>
+    </div>
+</div>
+

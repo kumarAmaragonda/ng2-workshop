@@ -1,0 +1,10 @@
+<h1>{{appTitle}}</h1>
+<h2>{{name}}</h2>
+<label>Image Url: </label>
+<input type="text" [(ngModel)]="imageUrl" />
+<br/>
+<br/>
+<img [src]="imageUrl" width="400" height="300" />
+<br/>
+<br/>
+<button (click)="changeImageUrl()">ClickMe!</button>
