@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>05-arguments</title>
+    <script type="text/javascript">
+
+      function sum() {
+            console.log('no named prams');   
+
+            for(var i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }  
+
+            console.log(Array.isArray(arguments));
+       }
+
+       console.log("arity: ", sum.length);
+       sum(10, 20, 30, 40 ,50);
+
+       sum(10, 20);
+       
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

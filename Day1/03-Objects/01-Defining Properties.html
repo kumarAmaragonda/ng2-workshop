@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01-Defining Properties</title>
+    <script type="text/javascript">
+
+      var person = {
+        firstName: 'Shravan Kumar',
+        lastName: 'Kasagoni'
+      };
+
+      console.log(person);
+
+      person.age = 20; //internal method [[Put]] invoked for first time for evry prop 
+    
+      console.log(person);
+
+      person.firstName = "yo yo!!!"; // [[Set]] method called
+
+      console.log(person);
+      console.log(person.firstName, person.lastName, person.age);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

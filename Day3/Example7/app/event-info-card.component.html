@@ -1,0 +1,6 @@
+<div *ngIf="eventInfo">
+    <h1>{{eventInfo.title}}</h1>
+    <h2>{{eventInfo.date | date}}</h2>
+    <p>{{eventInfo.venue}}</p>
+    <button (click)="deleteEventInfo(eventInfo)">Delete Me!</button>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">&nbsp;</div>
+    </div>    
+    <div class="row">
+        <div class="col-md-4">
+            <ul *ngFor='let event of events'>
+                <li class="eventbox" (click)='getEventInfo(event)'>{{event.title}}</li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <div *ngIf="selectedEvent">
+                <h1>{{selectedEvent.title}}</h1>
+                <h2>{{selectedEvent.date | date}}</h2>
+                <p>{{selectedEvent.venue}}</p>
+            </div>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-md-12">&nbsp;</div>
+    </div> 
+</div>

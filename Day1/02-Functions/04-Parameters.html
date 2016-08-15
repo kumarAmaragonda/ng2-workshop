@@ -3,22 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>04-Parameters</title>
+    <title>04-Pramaters</title>
     <script type="text/javascript">
 
-       function sum(a, b) {
-           console.log(a+b);
+       function print1(a, b) {
+           console.log(a, b);
        }
 
-       function sum(a, b, c) {
-           console.log(a+b+c);
+       function print2(a, b, c) {
+           console.log(a, b, c);
        }
 
-       function sum() {
-            console.log('no named prams');
-       }
+       print1(10, 20);
+       print2(10, 20, 30);
 
-       sum(10, 20, 30);
+
+       print1(10, 20, 30);
+       print1(10);
+
+       print2(10, 20);
+       print2(10, 20, 30, 40, 50);
+
+       
     </script>
 </head>
 
